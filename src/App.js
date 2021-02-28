@@ -3,10 +3,15 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Country from './Components/Country/Country';
 import Cart from './Components/Cart/Cart';
-
+import animalData from './Data/data.json';
 function App() {
   const [countries,setCountries]=useState([]);
   const [cart,setCart]=useState([]);
+  const [animal,setAnimal]=useState([]);
+  useEffect(()=>{
+    setAnimal(animalData)
+    console.log(animalData);
+  },[])
   useEffect(()=>{
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res=>res.json())

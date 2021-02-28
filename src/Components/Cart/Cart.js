@@ -11,7 +11,7 @@ const Cart = (props) => {
     const totalPopulation = cart.reduce( (sum,country) => sum + country.population, 0)
     return (
         <div>
-            <h2>THis is cart {cart.length}</h2>
+            <h2>This is cart : {cart.length}</h2>
             <p>Total Population : {totalPopulation}</p>
         </div>
     );
